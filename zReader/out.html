@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>...</title>
+<meta charset="UTF-8" />
+<link id=ZRfavicon rel="shortcut icon" href="img/ZRL.png" />
+<link rel="stylesheet" href="css/out.css" />
+<link rel="stylesheet" href="css/katex.css" />
+<link rel="stylesheet" href="css/zmather.io.css" />
+
+<script src="js/lib/jQ.js"></script>
+<script src="js/lib/jQUI.js"></script>
+<script src="js/lib/Base64.js"></script>
+<script src="js/lib/katex.js"></script>
+<script src="js/lib/qrcode.js"></script>
+
+
+<script src="js/lib/idbstore.js"></script>
+
+<script src="js/cfg/cfg.js"></script>
+<script src="js/lib/zmather_zlr.js"></script>
+
+<script src="js/lib/zmather_io.js"></script>
+
+<script src="js/data/city.js"></script>
+<script src="js/data/paper.js"></script>
+<script src="js/htm/out.js"></script>
+
+</head>
+<body id=zzllrrR>
+<div id=zrMedia hidden>
+	<div id=zrMediaOpt>
+		<i class="mi" id=zmediaBack>cancel</i>
+		<span id=zmediaOut class="mi-span"></span>
+		<input type=text id=zmediaCode hidden size=150 />
+		<span id=zmediaIn class="mi-span"></span>
+		<span id=zrMediaTip><i class="mi">info_outline</i><span id=click></span><i class="mi">favorite_border</i><span id=FAV></span> / <i class="mi">favorite</i><span id=unFAV></span></span>
+				</div>
+
+	<div id=mediaSearch>
+		<div id=mediabook>
+			<div id=bookResult class=mediaResult></div>
+
+			<div hidden>
+				<details open>
+					<summary class=mediaSech>
+						<input type=search id=bookSech />
+						<input type=button id=bookSechGO value=GO />
+						<input type=button id=bookSechOK class="mediaSechOK menu" value=OK /></summary>
+						<div id=bookSearch>
+							<div id=bookSechBy></div>
+								</div>
+						
+					</details></div>
+
+						</div>
+		
+		<div id=mediapress>
+			<div id=pressResult class=mediaResult></div>
+
+			<div>
+				<details open>
+					<summary class=mediaSech>
+						<input type=search id=pressSech />
+						<input type=button id=pressSechGO value=GO />
+						<input type=button id=pressSechOK class="mediaSechOK menu" value=OK /></summary>
+						<div id=pressSearch>
+							<div id=pressSechBy></div>
+							<div id=pressMap>
+								<svg id=map_cn height="400" width="400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" font-size="12"><path fill="#ffe7b8" stroke="#f9fcfe" d="M464,96L471,95L474,100L478,103L481,102H484L488,100L491,103L493,103L498,101L502,103L504,107H507L508,109L512,113L513,112L513,107L515,106L517,112L520,113L523,116L525,116L526,114L530,109L532,110L534,108L535,111L539,112H542L544,113L543,110L543,104L537,96L540,93L543,88H553L554,86L554,82L556,79L555,77L556,73L556,56L559,50L555,46L556,44L555,42L551,43L547,48L542,50L538,56L527,60L523,56L523,54L521,50L519,46L515,46L508,42L505,44L502,42L497,43L493,41L490,38L488,35L487,32L483,28L481,25L477,19L475,15L470,9L469,5L462,2L458,4L454,3L446,1L435,5L433,7L435,10L432,17L433,18L438,21L441,17L445,20L445,22L447,27L449,30L455,31L457,29L460,29L467,23L475,30L473,41L473,50V55L471,56L471,69L470,69L468,66H467L466,67C466,67,457,80,459,78C461,75,455,82,455,82L456,84L463,88L467,87L467,88L467,90L463,91L463,94L464,96Z" stroke-linejoin="round"></path><text x="507" y="76" text-anchor="middle"><tspan dy="4">黑龙江</tspan></text><path fill="#c0f0ff" stroke="#f9fcfe" d="M544,113L542,112H539L535,111L534,108L532,110L530.8,109L526,114L525,116L523,116L520,113L517,112L515,106L513,107L513,112L512,113L508,109L507,107H504L502,103L498,101L493,103L491,103L488,100L484,102H481L478,103L474,100L471,95L464,96L462,99L461,103L454,101L453,103L454,105L457,108V112L458,116L460,119L461,122L462,123L468,118L474,125V130L477,131L477,130L482,131L486,135L487,134L488,132L496,144L497,148L501,153L502,158L506,155L509,145L511,144L515,146L522,146L524,144L521,139L522,138C522,138,530,135,528,136C526,136,530,131,530,131L534,129L534,124L535,121L536,121L538,122L540,124L544,118L545,114L544,113Z" stroke-linejoin="round"></path><text x="495" y="120" text-anchor="middle"><tspan dy="4">吉林</tspan></text><path fill="#d3dd9b" stroke="#f9fcfe" d="M491,173.2L497,163L502,158L501,153L497,148L496,144L488,132L487,134L486,135L482,131L477,130L477,131V134L475,136L471,140.1H467.1L465,142H463L460,146H458L455,149L452,150L447,157L444,153L441,150L439,152.6L441,162L439,166L438,171L443,174L445,174L449,179L451,178C451,178,454,175,455,173C456,171,459,166,459,166L466,164L470,169L467,176L463,182L467,184L467,188L464,190L464,192L469,189L476,180L487,174L491,173.2Z" stroke-linejoin="round"></path><text x="476" y="154" text-anchor="middle"><tspan dy="4">辽宁</tspan></text><path fill="#c0f0ff" stroke="#f9fcfe" d="M413,235L413,233L411,230L418,217C418,217,427,209,424,212C422,214,429,210,429,210L433,205L431,204L430,200L427,201L421,200L421,198L421,189L424,188L424,186L424,186L425,182L419,184L420,186L420,188L421,189L418,190L416,192L412,191L407,192L407,190L407,185L411,181L412,176L415,172L422,176H424L425,181L427,182L428,185L427,187L431,190L432,192L435,193L444,189V186L449,179L445,174L443,174L438,171L439,166L432,165L429,160L429,158L423,151L419,153L415.9,156L417,159L416,160L411,161L409,163L407,162L405,164L400,167L398,166V161L396,160L394,162L391,168L389,174L393,181L396,184V189L398,193L397,198L393,201L390,208L394,213L397,219L395,222L395,226L393,228L392,231L395,234L406,236L411,234L413,235Z" stroke-linejoin="round"></path><text x="407" y="209" text-anchor="middle"><tspan dy="4">河北</tspan></text><path fill="#ffcca9" stroke="#f9fcfe" d="M425,252L426,249L428,248L433,252H434L439,252L441,250L445,252L446,250L446,248L449,247L450,243L453,243L461,229L459,227L461,226L463,226L465,225L467,222L473,216L478,214L481,212L480,207L477,206L469,207L464,205L460,205L452,216L450,217L445,215L445,212L444,208L441,206L436,207L433,205L429,210L424,212C424,212,416,219,418,217C420,215,411,230,411,230L413,233L413,235V236L413,238L416,236L419,235L409,246V249L411,250L416,254L423,253L425,252Z" stroke-linejoin="round"></path><text x="435" y="229" text-anchor="middle"><tspan dy="4">山东</tspan></text><path fill="#c0f0ff" stroke="#f9fcfe" d="M483,282L482,286L480,289L477,292L472,292L468,289L465,290L457,290L457,286L452,283L451,281L453,278V277V274L458,274L458,272L457,270L454,269L452,272L448,271L447,269L444,267L445,261L444,260L441,261L439,259L434,258L431,255L425,252L426,249L428,248L433,252H434L439,252L441,250L445,252L446,250L446,248L449,247L450,243L453,243L460,248C460,248,463,248,465,250C467,251,475,266,475,266L475,268L481,271L483,274L486,275L487,278L485,279L482,278H477L473,276L471,278L475,279L479,280L483,282Z" stroke-linejoin="round"></path><text x="467" y="267" text-anchor="middle"><tspan dy="4">江苏</tspan></text><path fill="#f7b7b7" stroke="#f9fcfe" d="M483,336L477,338L473,334L471,337H467L465,334L463,329L459,328L455,321L453,317L454,315L455,315C455,315,461,306,459,308C458,311,459,304,459,304L461,302L464,301L465,300L464,297L465,295V290L468,289L472,292L477,292L480,289L484,292L482,293L480,296L477,297L476,298L479,300L485,297L494,301L495,309H491L491,312L493,315L491,317L493,320L490,324L489,322L484,334L483,336Z" stroke-linejoin="round"></path><text x="474" y="312" text-anchor="middle"><tspan dy="4">浙江</tspan></text><path fill="#b1f2c7" stroke="#f9fcfe" d="M423,253L425,252L431,255C431,255,433,257,434,258C435,258,439,259,439,259L441,261L444,260L445,261L444,267L447,269L448,271L452,272L454,269L457,270L458,272L458,274L453,274V277V278L451,281L452,283L457,286L457,290L465,290V295L464,297L465,300L464,301L461,302L459,304L459,308L455,315L454,315L452,313H446.5L444,310L439,315L437,314L439,310L439,309L437,309L431,312L426,302L427,298L427,297L424,296L419,294L421,290L424,288L425,285L423,279L423,279L420,282C420,282,414,277,416,278C417,279,413,274,413,274L416,272L417,268L419,266L418,261L420,260L422,262L424,264L427,262L429,260L428,258L424,255L423,253Z" stroke-linejoin="round"></path><text x="440" y="288" text-anchor="middle"><tspan dy="4">安徽</tspan></text><path fill="#f4d3f4" stroke="#f9fcfe" d="M371,276L380,284L388,286L395,284L397,286L400,284L401,286L402,289L406,291H410L414,294L417,292L419,294L421,290L424,288L425,285L423,279L423,279L420,282L416,278L413,274L416,272L417,268L419,266L418,261L420,260L422,262L424,264L427,262L429,260L428,258L424,255L423,253L416,254L411,250L409,249V246L419,235L416,236L413,238L413,236V235L411,234L406,236L395,234L394,244C394,244,388,249,389,248C390,247,381,250,381,250L371,257L363,259V260L371,272L371,276L371,276Z" stroke-linejoin="round"></path><text x="395" y="266" text-anchor="middle"><tspan dy="4">河南</tspan></text><path fill="#ffe7b8" stroke="#f9fcfe" d="M363,259L371,257L381,250L389,248L394,244L395,234L392,231L393,228L395,226L395,222L397,219L394,213L390,208L393,201L397,198L398,193L396,189V184L393,181L386,184L385,183L381,186L377,186L371,195H369L366,198L366,202L364,205L364,210L361,215L364,222L363,226L360,230C360,230,364,249,364,247S361,256,361,256L363,259Z" stroke-linejoin="round"></path><text x="378" y="221" text-anchor="middle"><tspan dy="4">山西</tspan></text><path fill="#f9caca" stroke="#f9fcfe" d="M363,259L361,256L364,247L360,230C360,230,364,224,363,226C362,227,364,222,364,222L361,215L364,210L364,205L366,202L366,198L364,197L362,199L356,200L353,204L353,207L353,208L350,209L341,223L339,222L337,221L331,222L330,224L329,230L330,231L339,236L344,239L345,242L343,246L344,250L343,252L336,252L335,253L335,254V256L330,257L327,256H323L323,256L323,258L322,260L321,263L325,266L322,271L323,273L323,274H319L316,276L318,279L317,283L319,284L319,286L321,286L329,285L330,286L331,288L334,288L340,292L344,290L352,293L354,295L358,294L357,290L356,289L357,286L361,284L363,282L360,281L358,280L355,278L356,277H365H367L368,278L371,276V272L363,260L363,259L363,259Z" stroke-linejoin="round"></path><text x="344" y="269" text-anchor="middle"><tspan dy="4">陕西</tspan></text><path fill="#c0f0ff" stroke="#f9fcfe" d="M196,200L195,183L195,180L200,177C200,177,205,172,207,172C209,171,218,167,218,167L222,165V161L224,159L226,159L233,160L233,164L234,168L233,176L239,185L242,187L247,184H257L260,184L261,187L260,189L255,194L255,196L262,201H264L265,202L265,204L269,207L278.5,209L283,208L288,202L295,202L298,207L296,211L297,213L293,215L291,217L292,222L299,227L301,226L309,236L311,243L310,246L315,249V251L320,252H322V248L325,248L326,243L324,241L322,239L323,230L325,229L328,230L329,230L330,231L339,236L344,239L345,242L343,246L344,250L343,252L336,252L335,253L335,254V256L330,257L327,256H323L323,256L323,258L322,260L321,263L325,266L322,271L323,273L323,274H319L316,276L318,279L317,283L313,284L313,286L312,288L304,287L301,285L301,280L299,279L297,280L292,276L289,274L288,270L287,268H285L278,271L279,274H276L272,270L267,269L265,267L267,264L269,266L273,267L275,265V260L278,258L280,256L279,253L285,248L286,241L283,237L282,231L275,222L271,223L266,219L259,214L256,208L251,210L241,203L236,206L228,205L223,208L219,208L213,205L209,203L196,200Z" stroke-linejoin="round"></path><text x="225" y="191" text-anchor="middle"><tspan dy="4">甘肃</tspan></text><path fill="#d3dd9b" stroke="#f9fcfe" d="M356,329L358,325L363,320L368,322L371,320L368,317L370,316L383,317L387,320L390,321L393,319L396,318L396,321H398L400,319L403,316L404,318V322L405,324L408,325L411,322L415,320L423,313L427,313L431,312L426,302L427,298L427,297L424,296L419,294L417,292L414,294L410,291H406L402,289L401,286L400,284L397,286L395,285C395,285,385,285,388,286C390,286,380,284,380,284L371,276L368,278L367,277H365H356L355,278L358,280L360,281L363,282L361,284L357,286L356,289L357,290L358,295L360,295L363,298L364,305L363,307L361,306L357,310L348,312L346,314L348,316L348,321L350,322L356,329Z" stroke-linejoin="round"></path><text x="388" y="300" text-anchor="middle"><tspan dy="4">湖北</tspan></text><path fill="#ffe7b8" stroke="#f9fcfe" d="M408,325L411,331L411,335L410,338L407,340L407,346L407,347L409,347L410,347V351L411,356L413,357L414,364L413,368.7L414,370L416,372L421,371L423,373L421,375L418,380V381L420,382L431,377L435,380L436,378L435,376L435,374L437,364L439,361L440,358L442,354L441,352L441,349L446,343L445,340L449,334L452,335L458,330L459,328L455,321L453,317L454,315L452,313H446.5L444,310L439,315L437,314L439,310L439,309L437,309L431,312L427,313L423,313C423,313,413,323,415,320C417,318,411,322,411,322L408,325Z" stroke-linejoin="round"></path><text x="429" y="333" text-anchor="middle"><tspan dy="4">江西</tspan></text><path fill="#c0f0ff" stroke="#f9fcfe" d="M435,374C435,374,438,362,437,364C436,366,439,361,439,361L440,358L442,354L441,352L441,349L446,343L445,340L449,334L452,335L458,330L459,328L463,329L465,334L467,337H471L473,334L477,338L483,336L479,345L477,344L475,345L475,346L477,348L477,357L477,360L477,361L474,360L472,362L474,365L470,368L471,369L468,370L468,373L467,374H463L461,376L460,377L462,378L460,382L457,385L456,385L453,388L449,381L446,377L444,377L443,376L435,374Z" stroke-linejoin="round"></path><text x="457" y="356" text-anchor="middle"><tspan dy="4">福建</tspan></text><path fill="#c0f0ff" stroke="#f9fcfe" d="M408,325L405,324L404,322V318L403,316L400,319L398,321H396L396,318L393,319L390,321L387,320C387,320,385,317,383,317C381,316,370,316,370,316L368,317L371,320L368,322L363,320L358,325L356,329C356,329,356,335,356,338C357,341,359,348,359,348L353,355L354,355L359,354L361,356L359,363L362,368L365,369L368,365L369,368L370,368L375,364L376,364L378,363L381,364V368L384,369L383,373L381,377L380,381H381L384,378L387,384L389,382H391L393,380V377L394,376L397,376L402,378L403,377L402,375L402,373L405,371L411,372L414,370L413,368L414,364L413,357L411,356L410,351V347L409,347L407,347L407,346L407,340L410,338L411,335L411,331L408,325Z" stroke-linejoin="round"></path><text x="383" y="346" text-anchor="middle"><tspan dy="4">湖南</tspan></text><path fill="#f4d3f4" stroke="#f9fcfe" d="M313,349L311,354L309.1,355L302,354L301,355L297,354L294,358L296,360V362L297,365L303,363L305,365L303,377L306,380L305,387L309,388L313,384L315,385L322,388L324,387L324,385L325,383L336,376L338,378L345,380L349,376L350,377H353V375L356,374V373L358,372L359,372L362,368L359,363L361,356L359,354L354,355L353,355L359,348L356,338L353,341L349,338L346,333L346,331L343,330L341,331L337,329L335,334L331,334L328,338L327,337L324,338L320,336L317,340V341L323,345L325,347C325,347,318,350,320,349C322.1,348,313,349,313,349Z" stroke-linejoin="round"></path><text x="330" y="359" text-anchor="middle"><tspan dy="4">贵州</tspan></text><path fill="#b7eac6" stroke="#f9fcfe" d="M279,280L281,276.9L279,274L278,271L285,268H287L288,270L289,274L292,276L297,280L299,279L301,280L301,285L304,287L312,288L313,286L313,284L317,283L319,284L319,286L321,286L329,285L330,286L331,288L334,288L340,292V299L336,300L335,308L330,312L329,317L324,315L318,317L318,322L318,326L324,330L327,337L324,338L320,336L317,340V341L323,345L325,347L320,349L313,349L312,346L310,345L305,348L303,346L302,342L301,341V339L297,338L296,339L296,342L293,343L292,345L293,348L286,356L287,366L284,369L282,367L275,371L273,370L263,350L259,348L255,347L254,344L256,341L253,339L249,342L246,342L244,332L243,330C243,330,241,307,243,313C244,319,239,305,239,305L242,303L235,291L227,285L228,281L229,280L241,278L249,280L253,279L255,282L261,288L265,287V283L266,281L271,279L273,282L275,280L279,281V280H279Z" stroke-linejoin="round"></path><text x="285" y="310" text-anchor="middle"><tspan dy="4">四川</tspan></text><path fill="#d3dd9b" stroke="#f9fcfe" d="M313,349L312,346L310,345L305,348L303,346L302,342L301,341V339L297,338L296,339L296,342L293,343L292,345L293,348L286,356L287,366L284,369L282,367L275,371L273,370C273,370,261,348,263,350C264,353,259,348,259,348L255,347L254,344L256,341L253,339L249,342L246,342L244,332L243,330L240,334L238,335L239,341L238,343H236L235,341L233,343L235,351H237L238,352C238,352,239,354,239,356C239,359,238,372,238,372L227,382L227,386L225,387L224,389L226,394L225,397L225,398L231,396L239,396L238,399L239,402L240,406L241,408L245,408L247,409L245,412L245,416L243,420L244,421L247,421L252,423L251,425L254,430H259L265,426L266,427V429L267,432L269,434L272,433L273,434L274,433V428L272,420L273,417H278H279L282,414L289,416L292,414L293,415L296,414L299,416H300L301,415L303,412L304,413L307,413L310,410L313,406L317,406L319,408L320,404L323,403L324,402L325,399L324,397L314,395L312,392H309H307L305,389L305,387L306,380L303,377L305,365L303,363L297,365L296,362V360L294,358L297,354L301,355L302,354L309,355L311,354L313,349Z" stroke-linejoin="round"></path><text x="274" y="392" text-anchor="middle"><tspan dy="4">云南</tspan></text><path fill="#ffe7b8" stroke="#f9fcfe" d="M153,234L158,236L166,234L165,232H163L162,230L162,228L166,226L169,222L161,215L160,208C160,208,162,206,164,206C166,205,190,200,190,200L192,199L196,200L209,203L213,205L219,208L223,208L228,205L236,206L241,203L251,210L256,208L259,214L266,219L271,223L275,222L282,231L283,237L286,241L285,248L279,253L280,256L278,258L275,260V265L273,267L269,266L267,264L265,267L267,269L272,270L276,274H279L281,276L279,280V281L275,280L273,282L271,279L266,281L265,283V287L261,288L255,282L253,279L249,280L241,278L229,280L228,281L227,285L225,286L225,290L218,299L207,296L206,292L199,286L183,284L176,283L174,282L168,278L155,275L147,258L147,254L150,252V247L152,240L150,238L153,234Z" stroke-linejoin="round"></path><text x="213" y="239" text-anchor="middle"><tspan dy="4">青海</tspan></text><path fill="#ffcca9" stroke="#f9fcfe" d="M385,447L380,456V460L370,468L359,465L357,457L358,454C358,454,366,445,364,448C361,450,366,446,366,446L375,445L379,444L381,443L384,443L385,447Z" stroke-linejoin="round"></path><text x="385" y="457" text-anchor="middle"><tspan dy="4">海南</tspan></text><path fill="#eed38b" stroke="#f9fcfe" d="M484,292L480,289C480,289,481,288,482,286C483,285,483,282,483,282L487,284L489,287L488,289L484,292Z" stroke-linejoin="round"></path><text x="496" y="286" text-anchor="middle"><tspan dy="4">上海</tspan></text><path fill="#ffcca9" stroke="#f9fcfe" d="M318,317L324,315L329,317L330,312L335,308L336,300L340,299V292L344,290L352,293L354,295L358,294L360,295L363,298L364,305L363,307L361,306C361,306,358,310,357,310C355,311,348,312,348,312L346,314L348,316L348,321L350,322L356,329L356,338L353,341L353,341L349,338L346,333L346,331L343,330L341,331L337,329L335,334L331,334L328,338L327,337L324,330L318,326L318,317Z" stroke-linejoin="round"></path><text x="338" y="320" text-anchor="middle"><tspan dy="4">重庆</tspan></text><path fill="#eed38b" stroke="#f9fcfe" d="M430,200C430,200,428,202,427,201C425,201,421,200,421,200L421,198L421,189L424,188L424,186L425,182L425,181L427,182L428,185L427,187L431,190L432,192L430,194L429,197L430,200Z" stroke-linejoin="round"></path><text x="436" y="191" text-anchor="middle"><tspan dy="4">天津</tspan></text><path fill="#ffcca9" stroke="#f9fcfe" d="M421,189L420,186L419,184L425,182L425,181L424,176H422L415,172L412,176C412,176,411,183,411,181C411,179,407,185,407,185L407,190L407,192L412,191L416.5,192L418,190L421,189Z" stroke-linejoin="round"></path><text x="419" y="173" text-anchor="middle"><tspan dy="4">北京</tspan></text><path fill="#b1f2c7" stroke="#f9fcfe" d="M301,226L305,225L308,224L313,220L313,214L316,205L322,201L323,202L325,208L322,212L321,216L331,219L331,222L337,221L339,222L341,223L350,209L353,208L353,207L353,204L356,200L362,199L364,197L366,198L369,195H371L377,186L381,186L385,183L386,184L393,181L389,174L391,168L394,162L396,160L398,161V166L400,167L405,164L407,162L409,163L411,161L416,160L417,159L415,156L419,153L423,151L429,158L429,160L432,165L439,166L441,162L439,152L441,150L444,153L447,157L452,150L455,149L458,146H460L463,142H465L467,140H471L475,136L477,134V131L474,130V125L468,118L462,123L461,122L460,119L458,116L457,112V108L454,105L453,103L454,101L461,103L462,99L464,96L463,94L463,91L467,90L467,88L467,87L463,88L456,84L455,82L459,78L466,67L467,66H468L470,69L471,69L471,56L473,55V50L473,41L475,30L467,23L460,29L457,29L455,31L449,30L447,27L445,22L445,20L441,17L438,21L433,18L432,17L435,10L433.4,7H431L426,10L421,17L423,18L426,18L429,25L427,27L425,31L420,48L422,51L421,54L410,61L404,60L401,59L401,61L396,79L394,82L395,85L398,87L403,85L410,85L413,82L417,81L424,84L434,93V95L432,97L421,97L417,100L414,100L412.8,103L407,104L404,109L403,113L396,118L391,118L386,125L381,128L372,126L369,125L365,128L363,135L368,142L365,146L360,149C360,149,352,159,353,157C355,155,347,161,345,161C342,162,330,163,330,163L328,162L311,170L303,174L301,173L300,171L290,170L278,167L275,163L257,161L254,162L233,160L233,164L234,168L233,176L239,185L242,187L247,184H257L260,184L261,187L260,189L255,194L255,196L262,201H264L265,202L265,204L269,207L278,209L283,208L288,202L295,202L298,207L296,211L297,213L293,215L291,217L292,222L299,227L301,226Z" stroke-linejoin="round"></path><text x="337" y="179" text-anchor="middle"><tspan dy="4">内蒙</tspan></text><path fill="#b1f2c7" stroke="#f9fcfe" d="M305,387L309,388L313,384L315,385L322,388L324,387L324,385L325,383L336,376L338,378L345,380L349,376L350,377H353V375L356,374V373L358,372L359,372L362,368L365,369L368,365L369,368L370,368L375,364L376,364L378,363L381,364V368L384,369L383,373L381,377L380,381H381L384,378L387,384L389,382H391L393,388L391,390L391,393L386,399L386,406L380,411L379,416L375,417L376,420L372,421L369,425L362,426L358,424L354,422L350,426L346,426L341,426C341,426,330,420,332,421C334,422,331,417,331,417L333,412L330,410H327L326,409L322,410L319,408L320,404L323,403L324,402L325,399L324,397L314,395L312,392H309H307L305,389L305,387Z" stroke-linejoin="round"></path><text x="353" y="397" text-anchor="middle"><tspan dy="4">广西</tspan></text><path fill="#ffcca9" stroke="#f9fcfe" d="M153,69L156,69L154,74L156,76L157,78L161,82L162,86L168,86L171,88H172L176,96L179,104L177,110L178,112L175,117L175,122L187,126L199,128L211,137L215,138L215,140L218,146L221,153L224,159L222,161V165L218,167L207,172L200,177L195,180L195,183L196,200L192,199L190,200L164,206L160,208L161,215L169,222L166,226L162,228L162,230L163,232H165L166,234L158,236L153,234L151,233H145L135,228H129L123,230H118L109,235L102,234L95,236L89,234L85,231L75,230L69,234L66,233L63,230L56,229L55,228L52,227L42,233L32,232L31,232L32,223L28,222L19,215L16,215L14,210L15,206L15,203L11,201L10,199L3,195V194L7,192L9,193L11,191L10,184L11,179L6,174L3,175L2,172L3,168L2,165L6,162L7,161V158L11,156L15,156L19,154L22,155L25,154L25,155L26,158L28,158L32,158C32,158,36,153,38,152C40,151,49,154,49,154L55,150L71,147L72,144L74,138L79,134H80V133L80,117L81,114L77,112L76,111L81,109L93,108L95,111L100,112L101,112L102,110L100,107L109,89L111,88L119,92H123L125,94L133,92L135,78L138,76L142,76L145,72L146,69L148,68L153,69Z" stroke-linejoin="round"></path><text x="118" y="164" text-anchor="middle"><tspan dy="4">新疆</tspan></text><path fill="#c0f0ff" stroke="#f9fcfe" d="M152,339L159,340L161,343L162,344L173,342L173,340L175,339L180,335L184,334L188,332L196,327L197,329L203,331L211,326L213,328L211,332L212,332H215L216,334L213,339L214,340H215L224,342L227,339L233,343L235,341L236,343H238L239,341L238,335L240,334L243,330L243,313L239,305L242,303L235,291L227,285L225,286L225,290L218,299L207,296L206,292L199,286L183,284L176,283L174,282L168,278L155,275L147,258L147,254L150,252V247L153,240L150,238L153,234L151,233H145L135,228H129L123,230H118L109,235L102,234L95,236L89,234L85,231L75,230L69,234L66,233L63,230L56,229L55,228L52,227L42,233L32,232L34,236L37,238L36,242L36,246L36,249L36,249L36,252L39,255L40,260L39,262L33,263L31,260L28,260L28,262L29,266L30,269V272L29,274L29,276L32,277L34,280L42,286V288L48,294L50,296L51,297L55,294L58,296C58,296,73,310,71,308C69,305,73,313,73,313H76L78,312L79,313V318L87,322L89,322L90,326L97,330L97,333L98,334L104,333H107L111,337L122,336L127,336L129,338L127,343L129,345L135,340L142,335L147,336L152,339Z" stroke-linejoin="round"></path><text x="134" y="289" text-anchor="middle"><tspan dy="4">西藏</tspan></text><path fill="#f3f3f3" stroke="#f9fcfe" d="M391,382L393,380V377L394,376L397,376L402,378L403,377L402,375L402,373L405,371L411,372L414,370L416,372L421,371L423,373L421,375L418,380V381L420,382L431,377L435,380L436,378L435,376L435,374L443,376L444,377L446,377L449,381L453,388L451,390L449,394L447,394L445,398L439,400L437,399L436,402V402H434H431L428,405L426,403L424,405L417,408L412,404L412,407L414,412L409,414L406,417L401,418L399,419H394C394,419,393,422,390,423C388,424,381,426,381,426L377,429L374,431L379,438L376,441L372,440L368,433L369,428V425L372,421L376,420L375,417L379,416L380,411L386,406L386,399L391,393L391,390L393,388L391,382Z" stroke-linejoin="round"></path><text x="408" y="390" text-anchor="middle"><tspan dy="4">广东</tspan></text><path fill="#ffcca9" stroke="#f9fcfe" d="M329,230L330,224L331,222L331,219L321,216L322,212L325,208L323,202L322,201L316,205L313,214L313,220L308,224L305,225L301,226C301,226,311,237,309,236C308,234,311,243,311,243L310,246L315,249V251L320,252H322V248L325,248L326,243L324,241L322,239L323,230L325,229L328,230L329,230Z" stroke-linejoin="round"></path><text x="315" y="225" text-anchor="middle"><tspan dy="4">宁夏</tspan></text><path fill="#a3d0f8" stroke="#f9fcfe" d="M417,409L421,409L424,407L426,411C426,411,420,414,422,413C424,412,417,413,417,413L417,409L417,409Z" stroke-linejoin="round"></path><text x="435" y="411" text-anchor="middle"><tspan dy="4">香港</tspan></text><path fill="#ffe7b8" stroke="#f9fcfe" d="M505,371L502,390L500,396V401L499,402L495,397L491,395L488,386C488,386,488,380,489,378C489,376,494,364,494,364L500,359L504,361L505,371Z" stroke-linejoin="round"></path><text x="504" y="391" text-anchor="middle"><tspan dy="4">台湾</tspan></text><path fill="#a3d0f8" stroke="#f9fcfe" d="M412,413L411,414C411,414,411,415,415,416S421,415,421,415L410,420Z" stroke-linejoin="round"></path><text x="416" y="425" text-anchor="middle"><tspan dy="4">澳门</tspan></text></svg>
+								
+								</div>
+							<div id=pressLocation></div>
+							<div class=clear></div>
+								</div>
+						
+					</details></div>
+
+						</div>
+		</div>
+			</div>
+<div id=zrMask hidden>
+	<div id=zrDialog>
+		<div id=zrDialogB>
+			<h2 id=zrDialogTitle></h2>
+			<input type=text id=zrDialogInput />
+			<div id=zrDialogButton>
+				<input type=button id=zrDialogOK value="OK" title="Enter / O" />
+				<i class="mi" id=zrDialogOff title="Esc">cancel</i>
+				
+				</div>
+					</div>
+						</div>
+		</div>
+
+<div id=theme_pics></div>
+<canvas id=zRcvs hidden></canvas>
+<div id=zRhead hidden>
+	<div id=ThemeOpt>
+        <span id=color>
+            <input type=image src="img/white.gif" />
+            <input type=image src="img/black.gif" />
+            <input type=image src="img/green.gif" />
+            <input type=image src="img/blue.gif" />
+            <input type=image src="img/pink.gif" />
+            </span>
+        <select id=theme>
+        	<option value=theme></option>
+            <option value=bing></option>
+            <option value=baidu></option>
+            <option value=qq></option>
+            <option value=diy></option>
+			</select>
+
+        <input type="range" min=0 max=100 step=1 id=opac hidden />
+        <i class="mi" id=imgdlTheme hidden>file_download</i>
+        <input type="button" value="›" id=themeOpt hidden />
+
+	</div>
+
+
+	<div id=RssTool hidden>
+       	<div id=rss>
+
+       		<span id=feedAdd class="rssTool mi-span" title=Q></span>
+			<span id=feedSech class="rssTool mi-span" title="Ctrl+Shift+S"></span>
+			<span id=feedBurn class="rssTool mi-span" title="Shift+Q"></span>
+			<i class="mi rssToolOff" id=zmediaBack title="Esc">cancel</i>
+				</div>
+
+		<div id=rssAdd>
+
+        	<div><span class=method></span>
+            	<span id=rssAddFile></span>
+            	<input type=file id=upOpml />
+            	</div>
+
+        	<div><span class=method></span>
+            	<span id=rssAddId></span>
+                <select id=RssAddIds></select>
+                <span>https://zhuanlan.zhihu.com/</span>
+            	<input type=text id=RssAddId />
+            	<span></span>
+            	</div>
+
+        	<div><span class=method></span>
+            	<span id=rssAddUrl></span>
+            	<input type=search id=urlAdd placeholder="http://" />
+                <input type=button id=RssAdd class=btnRss />
+            	</div>
+
+            <div>
+            	<select id=urlList hidden>
+                	<option>http://</option>
+                	</select>
+            	</div>
+        	<div id=noRss hidden>
+            	<input type=button id=noRssOff value="╳" />
+                <span id=rssBurnTip></span>
+                <input type=button id=RssBurn class=btnRss /></div>
+
+
+
+        	</div>
+            
+		<div id=rssSech>
+        	<input type=search id=RssSech />
+            <img width=16 src="img/Baidu.ico" data-sech="baidu" data-fn="fn0()">
+            <span>&nbsp;/&nbsp;</span>
+            <img width=16 src="img/google.gif" title="Google" data-lnk="www.google.com/#sclient=psy&q=%s" data-fn="'ext:xml'+'+'+fn0()">
+            <span>(XML)</span>
+            <img width=16 src="img/weixin.ico" data-sech="weixin" data-fn="fn0()">
+        	</div>
+              
+		<div id=rssBurn>
+			<div id=RSSInOut hidden>
+                <input type=button id=RssIn class=btnRss />
+                <input type=button id=RssOut class=btnRss />
+                
+            	<select id=rssInOut>                    	
+                    <option value=JSON></option>
+                    <option value=XML></option>
+                	</select>
+                <select id=RssAddIds2></select>
+            	</div>
+                
+            <div id=FeedEdit>
+            
+                <div id=feedBasic>
+                    <table id=FeedBasic><tbody>
+                        <tr><th id=FeedUrl>URL</th>
+                            <th id=FeedName></th>
+                            <th id=FeedDesc></th>
+                            <th id=FeedHome hidden></th>
+                            </tr>
+                        <tr><td id=feedUrl data-feed=u></td>
+                            <td id=feedName data-feed=n></td>
+                            <td id=feedDesc data-feed=d></td>
+                            <td id=feedHome data-feed=h hidden></td>
+                            </tr>
+                        </tbody></table></div>
+                        
+                <div id=ruleFull hidden>  
+                    <table id=RuleFull><tbody>
+                        <tr><th id=RuleFullArticle></th>
+                            <th id=RuleFullComment></th>
+                            </tr>
+                        <tr><td id=ruleFullArticle data-feed=r></td>
+                            <td id=ruleFullComment data-feed=t></td>
+                            </tr>
+                        </tbody></table></div>
+                        
+                <div id=ruleBurnSingle hidden data-feed=s>
+					<textarea id=RuleBurnSingle title="return Array" placeholder="return [{s:FeedUrl, u:EntryUrl, r:0, f:0, d:0, h:summary, p:Date.parse()/1000, a:author, g:category, c:CommentURL, e:CommentFeed}]"></textarea>
+                    </div>
+                <div id=ruleBurnDetail hidden>
+                    <table id=RuleBurn0><tbody>
+                        <tr><th id=RuleUrl></th>
+                            <th id=RuleHead></th>
+                            <th id=RuleHtml></th>
+                            <th id=RulePubDate></th>
+                            </tr>
+                        <tr><td id=ruleUrl data-feed=m></td>
+                            <td id=ruleHead data-feed=j></td>
+                            <td id=ruleHtml data-feed=l></td>
+                            <td id=rulePubDate data-feed=p></td>
+                            </tr>
+                        </tbody></table>
+                    
+                    <table id=RuleBurn1><tbody>
+                        <tr><th id=RuleAuthor></th>
+                        	<th id=RuleCategory></th>
+                            <th id=RuleCommentUrl></th>
+                            <th id=RuleCommentRss></th>
+                            </tr>
+                            
+                        <tr><td id=ruleAuthor data-feed=a></td>
+                            <td id=ruleCategory data-feed=g></td>
+                            <td id=ruleCommentUrl data-feed=c></td>
+                            <td id=ruleCommentRss data-feed=e></td>
+                            </tr>
+                        </tbody></table></div>
+                        
+
+            </div>
+            <div id=FeedBurn>
+                <label><input type=checkbox id=adv /></label>
+                <label><input type="radio" name=feed value=feedBasic checked /></label>  
+                <label hidden><input type="radio" name=feed value=ruleFull /></label>                  
+                <label hidden><input type="radio" name=feed value=ruleBurnSingle /></label>
+                <label hidden><input type="radio" name=feed value=ruleBurnDetail /></label>
+                <span id=feedEdit>                    	
+                    <input type=button id=RssAdd2 class=btnRss />
+                    </span>
+                </div>
+                
+        </div>
+
+
+				</div>
+		
+	<div id=logos>
+
+        <img id=logo src="img/ZRL.png" width=30 />
+		<span class=zname> </span>
+		<i id=zRAudioPause class="mi" hidden>hearing</i>
+			</div>
+		
+</div>
+
+<div id=zRbar>
+
+	<span id=navOpt hidden>
+		<i id=searchNeg class="mi">remove</i>
+		<i id=searchPos class="mi">add</i>
+		<input id=sechEntry type=search title="Enter" />
+
+		<select id=entryDate>
+            <option value=today></option>
+            <option value=yesterday></option>
+            <option value=last3></option>
+            <option value=last7></option>
+            <option value=last15></option>
+            <option value=last30 selected></option>
+            <option value="" id=EntryALL></option>
+            </select>
+		<select id=entryType>
+            <option value=0 id=unread></option>
+            <option value=1 id=read></option>
+            <option value="" id=entryAll></option>
+            </select>
+
+    </span>
+
+
+	<span id=EditTool hidden>
+		<label><span class=bold>B</span>(Ctrl+B)</label>
+		<label><span class=underline>U</span>(Ctrl+U)</label>
+		<label hidden><span class=overline>O</span>(Ctrl+O)</label>
+		<label hidden><span class=through>T</span>(Ctrl+T)</label>
+		
+		<label><span class=italic>I</span>(Ctrl+I)</label>
+		
+		
+		</span>
+	<span id=Sel hidden>
+		<label id=SelAll title=A><input type="checkbox"  id=selAll /></label>
+		<span id=selToggle title=I></span>
+		
+        <span id=fav class="mi-span" title=S></span>
+        <span id=unfav class="mi-span" title=S></span>
+        
+        <span id=markread class="mi-span" title="Shift + M"></span>
+		<span id=unmarkread class="mi-span" title="Shift + U"></span>
+        
+        <input type=text id=tags />
+        <span id=tag class="mi-span" title="Shift + T"></span>
+        
+		<span id=untag class="mi-span"></span>
+		<span id=del class="mi-span" title=D></span>
+
+        <span id=Out>
+        	<span id=out class="mi-span"></span>
+            <input type=button id=OutXML value="XML" hidden />
+
+			<input type=button id=OutHTML value="HTML" hidden />
+			<input type=button id=OutCSV value="CSV" hidden />
+            <input type=button id=OutURL value="URL" hidden />
+                </span>
+		</span>
+	</div>
+<div id=zRmain>
+	<div id=zRLeft>
+		<div id=tabs0 hidden>
+			<ul>
+				<li><a href="#Alls" id=ALLs><span id=EntryAll class="mi-span"></span></a></li>
+		        <li><a href="#Favs" id=FAVs><span id=EntryFav class="mi-span"></span></a></li>
+		        <li><a href="#Tags" id=TAGs><span id=EntryTag class="mi-span"></span></a></li>
+
+			</ul>
+
+	    	<div id=Alls>
+	    		<div id=AllOpt><span id=FeedAdd class="mi-span"></span><span id=Allopt data-o="" hidden></span></div>
+
+		        <div id=zRFolder></div>
+
+	         	</div>
+
+	    	<div id=Favs>
+	    		<br />
+	         	</div>
+
+			<div id=Tags>
+	    		<div id=TagOpt hidden><span id=Tagcnt></span><span id=Tag data-o="  "></span></div>
+		        <div id=zRTag></div>
+					</div>
+
+
+			
+	        	</div>
+	     <div id=Tabsleft><div id=tabsleft>&nbsp;</div>
+
+	     	</div>
+               	</div>
+    <div class=zRMid></div>
+	<div id=zRList>
+		<div id=zROpt hidden>
+			<div hidden id=settings>
+				<select id=imgOpts title="">
+			        <option value=imgPreAll></option>
+			        <option value=imgPreOne selected></option>
+			        <option value=imgPreOff></option>
+			        <option value=imgOff></option>
+			        </select>
+
+				<select id=sort>
+			    	<option value="sort"></option>
+			    	<option value="rulePubDate"></option>
+			        <option value="ruleHead"></option>
+			        </select>
+				<select id=sortType hidden>
+			    	<option value="up">▲</option>
+			    	<option value="dn">▼</option>
+			        </select>
+
+				<span id=fontSZ></span>
+		        <select id=fontSz>
+		        	<option value="sz0">A++</option>
+		            <option value="sz1">A+</option>
+		            <option value="sz2">A</option>
+		            <option value="sz3">A-</option>
+		            <option value="sz4">A--</option>
+		            <option value="sz5">A---</option>
+		            </select>
+
+				<span id=fontSP></span>
+		        <select id=fontSp>
+		        	<option value="sp0">0</option>
+		            <option value="sp1">1px</option>
+		            <option value="sp2">2px</option>
+		            <option value="sp3">3px</option>
+		            <option value="sp4">4px</option>
+		            <option value="sp5">5px</option>
+		            </select>
+
+				<span id=fontPD></span>
+				<select id=fontPd>
+			        <option value="pd0">++</option>
+			        <option value="pd1">+</option>
+			        <option value="pd2">.</option>
+			        <option value="pd3">-</option>
+			        <option value="pd4">--</option>
+			        <option value="pd5">---</option>
+			        </select>
+				<span id=Font></span>
+				<input type=text id=font list=CSS_fontfamily />
+
+
+				<span id=datalist hidden></span>
+
+					</div>
+
+			<div id=zROpts>
+			    <span id=unreadCnt></span>
+			    <span id=Allcnt></span>
+
+				<span id=Pager>
+					<span id=Page></span>
+					<input type="number" value=1 min=1 step=1 id=page class=btnnum />
+					<span id=pgPrev class="mi-span"></span>
+					<span id=pgNext class="mi-span"></span>
+
+					</span>
+				
+				<i class="mi FulscrToggle">stay_current_landscape</i>
+				<i class="mi SidebarToggle">view_array</i>
+
+				<i id=MrdAll class="mi" hidden>done_all</i>
+				<i class="mi Reload">refresh</i>
+				<i class="mi DelAll">clear</i>
+				<i id=Settings class="mi">settings</i>
+
+			</div>
+			<div id=btnRight>
+				<input type=button id=page0 value="∧" title=K hidden />
+		        <input type=button id=page1 value="∨" title=J hidden />
+				<input type=button id=Top0 value="▲" title=HOME />
+		        <input type=button id=Top1 value="▼" title=END />
+		        
+		    	</div>
+
+					</div>
+		<div id=zRentries></div>
+		<div id=zROpts>
+			<i class="mi page0">navigate_before</i>
+			<i class="mi page1">navigate_next</i>
+			
+			<i class="mi FulscrToggle">stay_current_landscape</i>
+			<i class="mi SidebarToggle">view_array</i>
+			
+			<i class="mi Reload">refresh</i>
+			<i class="mi DelAll">clear</i>
+
+		</div>
+		<textarea id=zRentryText hidden></textarea>
+	</div>
+	<div class=zRMid></div>
+	<div id=zRRight>
+		
+		<div id=tabs hidden>
+			<ul>
+				<li><a href="#book" id=Book class="mi-span"></a></li>
+				<li><a href="#press" id=Press class="mi-span"></a></li>
+				<li><a href="#audio" id=Audio class="mi-span"></a></li>
+		        <li><a href="#notes" id=Note class="mi-span"></a></li>
+				<li><a href="#hotkey" id=Hotkey class="mi-span"></a></li>
+		        <li><a href="#abt" id=Abt class="mi-span"></a></li>
+		        <li><a href="#dona" id=Dona><span id=DONA></span></a></li>
+			</ul>
+
+
+			<div id=notes>
+				<div id=NoteOpt>
+					<i id=NoteCode class="mi">code</i>
+					<i id=NoteAudio class="mi">volume_up</i>
+					<i id=NoteClear class="mi">backspace</i>
+					
+					</div>
+				<div id=note contenteditable=true></div></div>
+
+			<div id=audio>
+				
+				<details><summary></summary>
+						<div id=audioOpt>
+							<textarea id=audioTxt placeholder="Hello! zzllrr!"></textarea>
+							<div><i id=zRAudioPlay hidden class="mi">volume_up</i>
+								<i id=zRAudioPlay2 class="mi">audiotrack</i>
+								<i id=zRAudioClear class="mi">backspace</i>
+								<details><summary>
+									</summary>
+									<hr />
+									<div><input type=text class=btntxt value=Engine readonly data-d=0 /><select id=audioEngine></select></div>
+									<div><input type=text class=btntxt value=Language readonly data-d=0 /><select id=audioLanguage></select></div>
+									<div><input type=text class=btntxt value=Speed readonly data-d=6 /><input type=number id=audioSpeed min=0 max=9 class=btnnum /></div>
+									<div><input type=text class=btntxt value=Pitch readonly data-d=5 /><input type=number id=audioPitch min=0 max=9 class=btnnum /></div>
+									<div><input type=text class=btntxt value=Person readonly data-d=0 /><input type=number id=audioPerson min=0 max=4 class=btnnum /></div>
+									
+										</details>
+								</div>
+							</div>
+						
+						<audio controls="controls" id=audioPlay hidden></audio>
+						<div id=audioPlay2></div>
+					</details>
+				<div hidden id=zRaudioPlay>
+					
+					<div id=audioParaA></div>
+					</div>
+				</div>
+			<div id=book>
+				<div id=bookFav></div>
+						</div>
+			<div id=press>
+				<div id=pressFav></div>
+						</div>
+
+
+			<div id=hotkey>
+
+				<table border=0 align=center id=hotkeys><tbody>
+
+		            <tr><td id=fulscrToggle colspan=3></td>
+							<td class=hotk>Space</td>
+
+						</tr><tr><td id=SidebarToggle colspan=3></td>
+							<td class=hotk>L / F</td></tr>
+
+		            <tr><td id=Reload colspan=3></td>
+							<td class=hotk>R</td></tr>
+
+		            <tr><td id=RssAdd colspan=3></td>
+							<td class=hotk>Q</td>
+
+						</tr><tr><td id=RSSBurn></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>Q</td></tr>
+
+		            <tr><td id=RSSSech></td>
+							<td class=hotk>Ctrl+Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>S</td>
+
+						</tr><tr><td id=UnreadToggle colspan=3></td>
+							<td class=hotk>U</td></tr>
+
+
+
+		            <tr><td id=top0></td>
+							<td class=hotk>(Ctrl)+Home</td>
+							<td>／</td>
+							<td class=hotk>⌘+↑</td>
+
+						</tr><tr><td id=top1></td>
+							<td class=hotk>(Ctrl)+End</td>
+							<td>/</td>
+							<td class=hotk>⌘+↓</td></tr>
+
+					<tr>
+						</tr><tr><td id=ItemToggle colspan=3></td>
+							<td class=hotk>O</td>
+
+						</tr><tr><td id=CmtToggle></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>O</td></tr>
+
+
+		            <tr><td id=SechFocus colspan=3></td>
+							<td class=hotk>?</td>
+						</tr>
+
+
+		            <tr><td id=ZoomIn></td>
+							<td class=hotk>Ctrl/⌘</td>
+							<td>+</td>
+							<td class=hotk>+</td>
+
+						</tr><tr><td id=ZoomOut></td>
+							<td class=hotk>Ctrl/⌘</td>
+							<td>+</td>
+							<td class=hotk>-</td></tr>
+
+
+		            <tr><td id=Zoom0></td>
+							<td class=hotk>Ctrl/⌘</td>
+							<td>+</td>
+							<td class=hotk>0</td>
+
+						</tr><tr><td id=ItemScan colspan=3></td>
+							<td class=hotk>N / P</td></tr>
+
+		            <tr><td id=pgNext></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>→</td>
+
+						</tr><tr><td id=pgPrev></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>←</td></tr>
+
+		            <tr>
+						</tr><tr><td id=PAGE1 colspan=3></td>
+							<td class=hotk>J</td>
+
+						</tr><tr><td id=PAGE0 colspan=3></td>
+							<td class=hotk>K</td></tr>
+
+		            <tr><td id=FolderOpen></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>N / P</td>
+
+						</tr><tr><td id=FeedOpen></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>J(↓) / K(↑)</td></tr>
+
+
+
+		            <tr><td id=SELAll colspan=3></td>
+							<td class=hotk>A</td>
+
+						</tr><tr><td id=SELToggle colspan=3></td>
+							<td class=hotk>I</td></tr>
+
+
+					<tr><td id=qrTip colspan=3></td>
+							<td class=hotk>Z</td>
+
+						</tr><tr><td id=RULEFullArticle colspan=3></td>
+							<td class=hotk>X</td></tr>
+
+		            <tr><td id=NavWeb2 colspan=3></td>
+							<td class=hotk>C</td>
+
+						</tr><tr><td id=NavWeb colspan=3></td>
+							<td class=hotk>V</td></tr>
+
+					<tr><td id=MkrdToggle colspan=3></td>
+							<td class=hotk>M</td>
+
+
+						</tr><tr><td id=UnMkrdBat></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>U</td></tr>
+
+
+					<tr>
+		            	<td id=MkrdBat></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>M</td>
+
+						</tr><tr><td id=MkrdAll></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>A</td></tr>
+
+
+
+					<tr><td id=Del></td>
+							<td class=hotk>Delete</td>
+							<td>/</td>
+							<td class=hotk>D</td>
+
+						</tr><tr><td id=DelAll></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>(D)elete</td></tr>
+
+
+
+		            <tr><td id=Fav colspan=3></td>
+							<td class=hotk>S</td>
+
+						</tr><tr><td id=Imgdl colspan=3></td>
+							<td class=hotk>B</td></tr>
+
+			        <tr><td id=Pause></td>
+							<td class=hotk>Pause Break</td>
+							<td>/</td>
+							<td class=hotk>fn+F8</td>
+						</tr><tr><td id=Downloaded></td>
+							<td class=hotk>Ctrl/⌘+⇧</td>
+							<td>+</td>
+							<td class=hotk>J</td></tr>
+
+					<tr><td id=Edit></td>
+							<td class=hotk>Alt(⌥)</td>
+							<td>+</td>
+							<td class=hotk>1</td>
+
+						</tr><tr><td id=SelTxtdl></td>
+							<td class=hotk>Alt(⌥)</td>
+							<td>+</td>
+							<td class=hotk>2</td></tr>
+
+
+
+		            <tr><td id=Email colspan=3></td>
+							<td class=hotk>E</td>
+
+						</tr><tr><td id=Share></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>S</td></tr>
+
+		            <tr><td id=TAG colspan=3></td>
+							<td class=hotk>T</td>
+
+						</tr><tr><td id=TagBat></td>
+							<td class=hotk>Shift(⇧)</td>
+							<td>+</td>
+							<td class=hotk>T</td></tr>
+
+		            </tbody></table>
+						</div>
+						
+		    <div id=abt>
+				<div id=ABT>
+					<p><img id=zimg src="img/ZRL.png" /></p>
+		            <h2 id=zname></h2>
+					<h3 id=zprom></h3>
+
+					<table id=credits align=center><tbody>
+		            	<tr>
+		            		<th><h4 id=ZQR>↓↓ 订阅小乐公众号 ↓↓</h4>
+		            			<div id=weixinZQR></div>
+		            			</th>
+		            		</tr>
+		            	<tr>
+		            		<th><h4 id=Credits></h4>
+		            			<h5 id=zigCred class=credits data-zzllrr=ZIG></h5>
+		            			<h5><a href="http://jingyan.baidu.com/search?word=%E5%B0%8F%E4%B9%90%E9%98%85%E8%AF%BB%E6%94%BB%E7%95%A5" target=_blank>小乐阅读攻略</a></h5>
+		            			</th>
+		            		</tr>
+
+						</tbody></table>
+					<div id=abtjs></div>
+		            <span class="copyright abt">© 2013-2030 Created by zzllrr</span>
+		            <p id=zApp>
+		            	<img id=appZ src="img/zzllrr.gif" />
+		            	<img id=appZRC src="img/ZRC.png" />
+		            	<img id=appZAin1 src="img/ZAin1.gif" />
+		                <img id=appZIL src="img/ZIL.png" />
+		            	<img id=appZIG src="img/ZIG.png" />
+		            	</p>
+		                </div>
+							</div>
+							
+
+			<div id=dona>
+				
+				<div id=donaPic><a href="https://www.paypal.me/zzllrr" target=_blank>
+						<img src="img/paypal_dona.gif" id=donaPaypal title="Donate zzllrr RSS Reader" width=180 /></a>
+					<div id=donaQR>
+						<p><img src="img/Alipay.png" title="支付宝" class=alipayImg />
+							<div id=donaV2aliPay class=donaV2 title="支付宝赞赏"></div>
+						</p>
+						
+						<p><img src="img/Weixinpay.jpg" title="微信赞赏" />
+							<div><img src="img/F1weixinPay.webp" title="微信赞赏" /></div>
+						</p>
+						
+						<p><img src="img/QQpay.png" title="QQ钱包" class=qqpayImg />
+							<div id=donaV2qqPay class=donaV2 title="QQ钱包"></div>
+						</p>
+					</div>
+						</div>
+				<span id=donaTip></span>
+
+						</div>
+		</div>
+	    <div id=Tabsright><div id=tabsright>&nbsp;</div></div>
+    			</div>
+    <div class=clear></div>			
+	</div>
+
+</body>
+</html>
